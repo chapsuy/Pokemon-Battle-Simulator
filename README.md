@@ -45,4 +45,4 @@
 
 
 
-PBS is a console-modeled simulator that demonstrates how pokemon battles work in a 3-level mini-game. Complete the gauntlet without your pokemon fainting and you complete the simulation.
+## PBS is a console-modeled simulator that demonstrates how pokemon battles work in a 3-level mini-game. Complete the gauntlet without your pokemon fainting and you complete the simulation.
