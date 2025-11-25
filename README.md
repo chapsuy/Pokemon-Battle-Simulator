@@ -63,7 +63,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 - **Hepuller, Kate Nicole M.**
 
 
-|------------------|-------------|---------------------|
+
 | OOP Principle    | Description | Application in PBS |
 |------------------|-------------|---------------------|
 | **Encapsulation** | Bundling data with methods that operate on that data that restricts direct access to internal attributes. |Each class ( Pokemon, Player, Attack) keeps its data (name, HP, damage) private and exposes only controlled methods like takeDamageFrom(), chooseRandomAttack(), or getEnemy(). This protects internal state and avoids unintended modification. |
