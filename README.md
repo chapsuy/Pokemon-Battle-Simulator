@@ -43,11 +43,16 @@
 The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates the core flow of classic Pokémon battles through an interactive gameplay. Designed across three escalating levels, the simulator challenges players to strategically manage their chosen starter Pokémon as they face increasingly tougher opponents throughout each level.
 
 
-Players can perform the following: 
-Attack Variations
-Tackle
-Run
-Drink Potion
+
+** Players can perform the following:** 
+1. Attack
+   1. _Skill 1_
+   2.  _Skill 2_
+   3.   _Skill 3_
+    
+3. Tackle
+4. Run
+5. Drink Potion
 
 
 ## Avengers Team Members
@@ -55,7 +60,6 @@ Drink Potion
 - **De Castro, Aaron Rovic D.**
 - **Hepuller, Kate Nicole M.**
 
-
-  
+ # How to Run the Program
 
 
