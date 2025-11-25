@@ -40,14 +40,22 @@
 # Pokemon-Battle-Simulator
 
 ## Overview
- **PBS** is a console-modeled simulator that demonstrates how pokemon battles work in a 3-level mini-game. Complete the gauntlet without your pokemon fainting and you complete the simulation.
+The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates the core flow of classic Pokémon battles through an interactive gameplay. Designed across three escalating levels, the simulator challenges players to strategically manage their chosen starter Pokémon as they face increasingly tougher opponents throughout each level.
+
+
+Players can perform the following: 
+Attack Variations
+Tackle
+Run
+Drink Potion
+
 
 ## Avengers Team Members
 - **Alcantara, Daedan Ryu E.**
 - **De Castro, Aaron Rovic D.**
 - **Hepuller, Kate Nicole M.**
 
-  _“Your journey to mastery begins here.”_
+
   
 
 
