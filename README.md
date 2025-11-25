@@ -36,7 +36,7 @@
 
 
 ```
-
+_“Your journey to mastery begins here.”_
 # Pokemon-Battle-Simulator
 
 ## Overview
@@ -47,5 +47,7 @@
 - **De Castro, Aaron Rovic D.**
 - **Hepuller, Kate Nicole M.**
 
+  _“Your journey to mastery begins here.”_
+  
 
 
