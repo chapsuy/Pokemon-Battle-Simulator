@@ -31,7 +31,7 @@
             ╟┤                                                                             ├╢
             ╟┼┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┼╢
             ╚╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╧╝
-                              “Your journey to mastery begins here.”
+                                “Your journey to mastery begins here.”
   
 
 
@@ -45,7 +45,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 
 
 
-### Players can perform the following:
+### **Players can perform the following:**
 **********************************************
 1. Attack
    1. _Skill 1_
