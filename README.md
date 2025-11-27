@@ -129,8 +129,8 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 │     ├── Player.java
 │     ├── Pokemon.java
 │     └── Simulation.java
-├── 📄README.md
-└── 📄LICENSE
+├── 📄LICENSE
+└── 📄README.md
     
 
 
