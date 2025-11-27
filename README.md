@@ -119,18 +119,18 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 
 
 # Project Structure
-📂PokemonBattleSimulator/
-├── 📂src/
-│     ├── Attack.java
-│     ├── Display.java
-│     ├── EnemyArray.java
-│     ├── EnemyPokemon.java
-│     ├── Main.java
-│     ├── Player.java
-│     ├── Pokemon.java
-│     └── Simulation.java
-├── 📄LICENSE
-└── 📄README.md
+> 📂PokemonBattleSimulator/
+> ├── 📂src/
+> │     ├── Attack.java
+> │     ├── Display.java
+> │     ├── EnemyArray.java
+> │     ├── EnemyPokemon.java
+> │     ├── Main.java
+> │     ├── Player.java
+> │     ├── Pokemon.java
+> │     └── Simulation.java
+> ├── 📄LICENSE
+> └── 📄README.md
     
 
 
