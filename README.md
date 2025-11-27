@@ -75,12 +75,12 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
   1. Trainer registration
       - Player enters their trainer name.
       - Friendly intro dialogue welcomes the trainer.
-  2. Starter Polemon Selection
+  2. Starter Pokemon Selection
       - Choose from three classic starters:
           - Bulbasaur (Grass)
           - Charmander (Fire)
           - Squirtle (Water)
-      - Each Pokémon has unique stats and type advantages.
+      - Each Pokemon has unique stats and type advantages.
   3. Turn-Based Battle System
       - Player and enemy Pokémon take turns selecting moves until one faints.
       - Type-effectiveness mechanics (Fire > Grass, Water > Fire, Grass > Water)
