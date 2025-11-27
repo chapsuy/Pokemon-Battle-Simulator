@@ -75,7 +75,6 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
   1. Trainer registration
       - Player enters their trainer name.
       - Friendly intro dialogue welcomes the trainer.
-      - Trainer starts with 100 coins.
   2. Starter Polemon Selection
       - Choose from three classic starters:
           - Bulbasaur (Grass)
@@ -85,22 +84,39 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
   3. Turn-Based Battle System
       - Player and enemy Pokémon take turns selecting moves until one faints.
       - Type-effectiveness mechanics (Fire > Grass, Water > Fire, Grass > Water)
-  4. Coin & Reward System
+  4. Multi-Level Enemy Encounters
+      - Level 1: Pidgey, Ratata, Caterpie, Weedle, Spearow, Jigglypuff
+      - Level 2: Ekans, Sandshrew, Oddish, Mankey, Meowth, Bellsprout
+      - Level 3: Vulpix, Growlithe, Ekans, Pidgey, Meowth, Jigglypuff
+  5. Coin & Reward System
       - Earn coins after winning battles
-  5. Visual ASCII Displays
+  6. Visual ASCII Displays
       - Every Pokémon has its own ASCII art loaded via the Display class.
      
 
 # How to Run the Program
-Pokemon Battle Simulator │ ├── 📂src │ ├── Attack.java | ├── Display.java
-│ ├── EnemyArray.java
-│ ├── EnemyPokemon.java
-| ├── Main.java
-| ├── Player.java
-| ├── Pokemon.java
-│ └── Simulation.java
-│ ├── 📄README.md
-└── 📄LICENSE
+  1. Download the Project
+      - Click Code → Download ZIP, then extract the folder
+       
+  2. Open the Project
+      - Open the extracted folder containing all the .java files.
+      - Make sure the files stay together and are not moved individually.
+      - Locate Main.java — this is the program’s entry point.
+
+  3. Run the Project 
+      - Open VS Code
+      - Go to File → Open Folder and select the project folder
+      - Wait for VS Code to detect the Java project
+      - Open Main.java
+      - Click the Run ▶ button 
+
+  4. Start Playing
+      - Once the program starts:
+      - Enter your trainer name
+      - Choose your starter Pokémon
+      - Battle through Levels 1 to 3
+      - Earn coins and survive the encounters
+
 
 # Project Structure
 PokemonBattleSimulator/
