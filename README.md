@@ -67,7 +67,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 | OOP Principle    | Description | Application in PBS |
 |------------------|-------------|---------------------|
 | **Encapsulation** | Bundling data with methods that operate on that data that restricts direct access to internal attributes. |Fields are private (e.g., `Pokemon.name`, `HP`, `attacks`, `Defense`) and accessed through getters (`getHP()`, `getDefense()`), which hides internal state.|
-| **Abstraction**   | Hiding complex implementation details while exposing only essential functions. |Complex behavior is simplified behind methods. The Simulation class abstracts the entire battle flow (pokemonBattle(), displayStats(), newGame() ), so the main program doesn’t deal with  battle mechanics.. |
+| **Abstraction**   | Hiding complex implementation details while exposing only essential functions. |Complex behavior is simplified behind methods. The Simulation class abstracts the entire battle flow (`pokemonBattle()`, `displayStats()`, `newGame()` ), so the main program doesn’t deal with  battle mechanics.. |
 | **Inheritance**   | Reusing and extending functionality of existing classes. | `EnemyPokemon extends Pokemon`. This models the “is-a” relationship: an enemy Pokémon is a specific kind of `Pokemon` with extra behavior (`chooseRandomAttack()`). |
 | **Polymorphism**  | Allowing the same method call to behave differently depending on the object. |The simulator can call the same method name on different objects and achieve different results. Different Pokémon may override `getAttacks()` or `takeDamageFrom()`. In future subclasses, overridden methods would run dynamically at runtime. `EnemyPokemon` can be used anywhere a `Pokemon` is expected (battle methods accept `Pokemon`). |
 
@@ -146,6 +146,142 @@ When the program starts:
    >```
     
 
+# Playthrough snippet
+ 
+```
+Hello Daedan! Get ready for an exciting adventure!
+You are given 100 coins to start your journey.
+================================
+Choose your starter Pokemon:
+1. Bulbasaur (Grass Type)
+2. Charmander (Fire Type)
+3. Squirtle (Water Type)
+================================
+1
+You chose option: 1
+================================
+You chose Bulbasaur!
+
+
+
+
+
+                                         ▓  ▒
+                              ░░░░░░░▓▓▓▓▓▓▓░▒
+                        ▓█████▓▓▓▓▓▓▓█▓▓██▓▓▒▒
+           ▒▒░        ▒▓▓▓▓██▓▒▒███▓█▓▓▓▓██▒▒▒
+         ░██████████████████████░▓▓▓▓▓▓██▓▓▒░▒▒
+         ░██████░▒▒▒▒▒█████████▓▓▒▓▓▓▓▓▓▒▒▒▒▒░▒▓░       
+       ░███████▒░░▒▓███████████▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒      
+      ░▓█░▓█░▒███████████▒░░▓██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒░▒▒▒      
+     ░▒█▒█▓████░▒░▓██▓███░▒█▒░▓▓▓▓▒▓▒░░▒▒▒▒▒▒▒▒▒▒▒░     
+     ░██▒████████▓████▓██░░█▒░▒▓▓▓▒▓▒░░░░░░░▒▒▒▒▒▒      
+     ▒▓███████████████▒██▒░▒▒▓▓▓▓▓▓▓▓▒░░░░ ▒░▒▒▒▒       
+      ░▒▒▒▒▓████████████▓▓▒▒▒▓▓▓▒▓▓▓▓▓▓▓▓▓▓▓▓▒
+          ░▓░▒▓▓▓▓▓▓▓▓▓░░▓▓▓▓▓▒▓█████▓▒▓▒▓██▓▓▓
+           ██▓▒▒▒▒▒▒▒▒▒▒▒▒░▒▒▓██▒▓███▓ ▓▒▒▒░▒▓▓▒░       
+           ▒▒▒▒▒▓▓▒░▓▓▒▒▒▒▒▒▓▒▒▓▒▓██▓▓▓█▒▒░░▒▓▓▒        
+            ░▒░▓▓▓▓▓▓   ░░░ ▒▒▒████▓▒░▒▓▓▓▒▓▓▓▓▒
+             ▓▓▓▓▓▓▒       ▒░▒███▓▓░  ░▓▓▓▓▓▓▓▒
+                ▒         ▓ █▓░▓░          ░▒
+
+
+
+
+
+============================================
+POKEDEX:
+ A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.
+============================================
+Great choice! Bulbasaur is ready for battle!
+Press Enter key to continue...
+```
+
+```
+Oh no! A wild Caterpie appeared!
+
+
+
+                   ███▓▓▒▓
+    ░█░░      ███████ ░█▓░  ▒▒▒
+      ░░░░░ ▒▓███ ░▒░░░     ▒▒▒▒▒▒
+          ░░░░░░░     ▒▒▒▒▒██ ░░▒█▒
+        ▓▒▒▒     ▒▒▒▓▒▒▒▒▓██  ░░░░▓
+        ▒▒▒▒▒   ▒▒▒▒▒▒▒▒▒▒█▓       ▓▒
+       ▓▒▒▒▒▒▒▒▒▒▒▓▒▓▒▒▒▒▒ █▓     ▓▒▒
+        ▒▒ ▒▓█▓▒▒▒▓▒ ▒▓▒▒▒▓▒ ████▓▒▒▒
+         ▒▓████▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█
+         ▓█ ██▓▒▒▒▒▒▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒▒▒█
+          ░▒▒▒▒▒▓▒▒▒░▒▒░  ▒▒▒▒▒▒▒░▒▒▒▒▒█
+           ▒▒▒▒▒▒▒▒▒ ▒     ▒▒▒▒▒▒▓▒▓▒▒█▓
+                  ▒▓▓▓▓▓▓▓░▒▒▒▒▒▒▓▓▒▒▒██
+             ▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▓▒▒▒▒▓▒         ▓▓▓▓
+            █▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▓▒▒▓▒          ▓▓▓▓▓
+            █▓▓▓▓▓▓▓▓▓░▓▓▓▓▓▓▒▒▒▓▒▒▒▒           ▓▓▓▓
+                ▓▓▓▓▓▓▓ ▓▓▓▓▒▒▒▒▒▒▒             ▓▓▓
+               ▓▓█▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒             ▓▓
+                ▓▓▓▓▓▓▓▓▓▓▓▓ ▒▒▒▒▒▒▒            ▓
+               ░▓ ▓▓▓▓▓▓█▓▓▓▓ ▒▒ ▒▒▓▒▓▒▓     ░▒▒▒
+                     ▓░ ░▓▓ ▓▓▓ ▒▒▒▒▓▓▒▒▒▓▒▒▒ ▒▒
+                       ▓▓▓▓▓▓▓▓▓ ▓ ▒▒▒▒ ▒▒▒▒▒ ░
+                           ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒
+
+
+
+
+
+
+====================================
+
+            MAIN MENU
+1. Fight
+2. Use Potion
+3. Run
+
+====================================
+
+Choose an action (1-3): 1
+
+====================================
+
+Caterpie HP: 45
+Bulbasaur HP: 45
+
+====================================
+
+Press Enter key to continue...
+
+Bulbasaur is ready to fight! Select an attack:
+Attack 1: Growl
+Attack 2: Tackle
+Attack 3: Vine Whip
+Select an attack (1-3): 3
+Bulbasaur used Vine Whip!
+It's not very effective...
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+Wild Caterpie used String Shot!
+It's not very effective...
+Loading
+..........
+====================================
+
+Caterpie HP: 39
+Bulbasaur HP: 44
+
+====================================
+
+Loading
+..........
+```
 
 # Acknowledgements
   Team Avengers would like to express our deepest appreciation to our professor, **Ms. Fatima Marie Agdon**, who has an outstanding guidance and support throughout the duration of our semester in Java Object-Oriented Programming. Her dedication to teaching this course and her willingness to assist us whenever we faced problems in our code  truly made a a big impact  in our learning journey. The knowledge, motivation, and  insights she shared greatly enriched our understanding and helped us grow as programmers. We are sincerely thankful for her mentorship and for creating an environment that encouraged us to improve and succeed as her students.
