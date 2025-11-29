@@ -70,7 +70,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 | **Abstraction**   | Hiding complex implementation details while exposing only essential functions. |Complex behavior is simplified behind methods. The Simulation class abstracts the entire battle flow (pokemonBattle(), displayStats(), newGame() ), so the main program doesn’t deal with  battle mechanics.. |
 | **Inheritance**   | Reusing and extending functionality of existing classes. | The design allows extensibility. The Attack class may serve as a base for specialized attacks, and Pokemon could be extended into subclasses (Fire-type, Water-type) without rewriting core code. |
 | **Polymorphism**  | Allowing the same method call to behave differently depending on the object. |The simulator can call the same method name on different objects and achieve different results. Different Pokémon may override getAttacks() or takeDamageFrom(). In future subclasses, overridden methods would run dynamically at runtime. |
-
+**************************************************************************
 # Features
   1. Trainer registration
       - Player enters their trainer name.
@@ -92,31 +92,41 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
       - Earn coins after winning battles
   6. Visual ASCII Displays
       - Every Pokémon has its own ASCII art loaded via the Display class.
+**************************************************************************
+
+ ## 🕹️ How to Run the Program <img src="https://github.com/user-attachments/assets/81d0d6e7-a346-4eba-a6c4-71c2083f8f49" width="50">
+
+### 📥 1. Download
+- Go to **Code → Download ZIP**
+- Extract the ZIP file to any folder
+
+---
+
+### 📁 2. Open the Project
+- Open the extracted directory containing the `.java` files
+- Do **not** move files individually  
+- Look for **Main.java** — this is the program’s starting file
+
+---
+
+### ▶️ 3. Run Using VS Code
+1. Open **VS Code**
+2. Click **File → Open Folder**
+3. Select the project folder  
+4. Wait for VS Code to load Java extensions  
+5. Open **Main.java**  
+6. Click **Run ▶️**
+
+---
+
+### 🎮 4. Start Playing
+When the program starts:
+- Enter your trainer name  
+- Pick your starter Pokémon  
+- Battle through Levels **1 → 3**  
+- Earn coins, win encounters, and complete the challenge  
      
 
-# How to Run the Program <img src="https://github.com/user-attachments/assets/81d0d6e7-a346-4eba-a6c4-71c2083f8f49" width="50">
-
-  1. Download the Project
-      - Click Code → Download ZIP, then extract the folder
-       
-  2. Open the Project
-      - Open the extracted folder containing all the .java files.
-      - Make sure the files stay together and are not moved individually.
-      - Locate Main.java — this is the program’s entry point.
-
-  3. Run the Project 
-      - Open VS Code
-      - Go to File → Open Folder and select the project folder
-      - Wait for VS Code to detect the Java project
-      - Open Main.java
-      - Click the Run ▶ button 
-
-  4. Start Playing
-      - Once the program starts:
-      - Enter your trainer name
-      - Choose your starter Pokémon
-      - Battle through Levels 1 to 3
-      - Earn coins and survive the encounters
 
 
 # Project Structure
