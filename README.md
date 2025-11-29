@@ -283,5 +283,29 @@ Loading
 ..........
 ```
 
+# Gameplay Mechanics
+## Attack Damage
+```
+public int getDamage(Pokemon victim) {
+        if (victim == null) {
+            throw new IllegalArgumentException("Target pokemon cannot be null");
+        }
+
+        double baseDamage = damage * 1.0;
+        int defenseValue = victim.getDefense();
+    
+        double defenseMultiplier = Math.max(0.1, 1.0 - (defenseValue / 100.0)); // Ensure at least 10% damage gets through
+        double randomMultiplier = Math.random() * 0.15 + 0.85;
+        
+        int calcDamage = (int)(baseDamage * defenseMultiplier * randomMultiplier);
+        return Math.max(1, calcDamage); 
+    }
+```
+$$
+D_{\text{final}} = \max\left(1,\; \left\lfloor 
+D \cdot \max\left(0.1,\; 1 - \frac{\text{DEF}}{100} \right) \cdot r 
+\right\rfloor \right), \quad r \in [0.85,\, 1.00]
+$$
+
 # Acknowledgements
   Team Avengers would like to express our deepest appreciation to our professor, **Ms. Fatima Marie Agdon**, who has an outstanding guidance and support throughout the duration of our semester in Java Object-Oriented Programming. Her dedication to teaching this course and her willingness to assist us whenever we faced problems in our code  truly made a a big impact  in our learning journey. The knowledge, motivation, and  insights she shared greatly enriched our understanding and helped us grow as programmers. We are sincerely thankful for her mentorship and for creating an environment that encouraged us to improve and succeed as her students.
