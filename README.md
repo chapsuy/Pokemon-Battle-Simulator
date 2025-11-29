@@ -46,7 +46,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 
 
 ## 🎮 Players can perform the following:
-**********************************************
+
 1. ⚔️ Attack
    1. *Skill 1*
    2. *Skill 2*
