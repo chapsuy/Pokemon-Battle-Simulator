@@ -70,7 +70,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 | **Abstraction**   | Hiding complex implementation details while exposing only essential functions. |Complex behavior is simplified behind methods. The Simulation class abstracts the entire battle flow (pokemonBattle(), displayStats(), newGame() ), so the main program doesn’t deal with  battle mechanics.. |
 | **Inheritance**   | Reusing and extending functionality of existing classes. | The design allows extensibility. The Attack class may serve as a base for specialized attacks, and Pokemon could be extended into subclasses (Fire-type, Water-type) without rewriting core code. |
 | **Polymorphism**  | Allowing the same method call to behave differently depending on the object. |The simulator can call the same method name on different objects and achieve different results. Different Pokémon may override getAttacks() or takeDamageFrom(). In future subclasses, overridden methods would run dynamically at runtime. |
-**************************************************************************
+
 # Features
   1. Trainer registration
       - Player enters their trainer name.
@@ -92,7 +92,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
       - Earn coins after winning battles
   6. Visual ASCII Displays
       - Every Pokémon has its own ASCII art loaded via the Display class.
-**************************************************************************
+
 
  ## 🕹️ How to Run the Program <img src="https://github.com/user-attachments/assets/81d0d6e7-a346-4eba-a6c4-71c2083f8f49" width="50">
 
@@ -148,4 +148,4 @@ When the program starts:
 
 
 # Acknowledgements
-Team Avengers would like to express our deepest appreciation to our professor, Ms. Fatima Marie Agdon, who has an outstanding guidance and support throughout the duration of our semester in Java Object-Oriented Programming . Her dedication to teaching this course and her willingness to assist us whenever we faced problems in our code  truly made a a big impact  in our learning journey. The knowledge, motivation, and  insights she shared greatly enriched our understanding and helped us grow as programmers. We are sincerely thankful for her mentorship and for creating an environment that encouraged us to improve and succeed as her students.
+Team Avengers would like to express our deepest appreciation to our professor, **Ms. Fatima Marie Agdon**, who has an outstanding guidance and support throughout the duration of our semester in Java Object-Oriented Programming . Her dedication to teaching this course and her willingness to assist us whenever we faced problems in our code  truly made a a big impact  in our learning journey. The knowledge, motivation, and  insights she shared greatly enriched our understanding and helped us grow as programmers. We are sincerely thankful for her mentorship and for creating an environment that encouraged us to improve and succeed as her students.
