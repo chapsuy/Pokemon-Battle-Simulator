@@ -47,14 +47,14 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 
 ### **Players can perform the following:**
 **********************************************
-1. Attack
-   1. _Skill 1_
-   2.  _Skill 2_
-   3.   _Skill 3_
+1. ⚔️ Attack
+   1. *Skill 1*
+   2. *Skill 2*
+   3. *Skill 3*
     
-3. Tackle
-4. Run
-5. Drink Potion
+3. 🐾 Tackle
+4. 🏃 Run
+5. 🧪 Drink Potion
 
 
 ##  Ⓐ Avengers Team Members
