@@ -94,7 +94,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
       - Every Pokémon has its own ASCII art loaded via the Display class.
      
 
-# How to Run the Program <img src="https://github.com/user-attachments/assets/81d0d6e7-a346-4eba-a6c4-71c2083f8f49" width="100">
+# How to Run the Program <img src="https://github.com/user-attachments/assets/81d0d6e7-a346-4eba-a6c4-71c2083f8f49" width="50">
 
   1. Download the Project
       - Click Code → Download ZIP, then extract the folder
