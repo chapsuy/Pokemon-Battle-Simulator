@@ -66,11 +66,10 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 
 | OOP Principle    | Description | Application in PBS |
 |------------------|-------------|---------------------|
-| **Encapsulation** | Bundling data with methods that operate on that data that restricts direct access to internal attributes. |Fields are private (e.g., 'Pokemon.name', HP, attacks, Defense) and accessed through getters (getHP(), getDefense()), which hides internal state.
-Defensive copy: Pokemon constructor and getAttacks() use Arrays.copyOf(...) to prevent external modifications to the internal attacks array — good practice.|
+| **Encapsulation** | Bundling data with methods that operate on that data that restricts direct access to internal attributes. |Fields are private (e.g., `Pokemon.name`, `HP`, `attacks`, `Defense`) and accessed through getters (`getHP()`, `getDefense()`), which hides internal state.|
 | **Abstraction**   | Hiding complex implementation details while exposing only essential functions. |Complex behavior is simplified behind methods. The Simulation class abstracts the entire battle flow (pokemonBattle(), displayStats(), newGame() ), so the main program doesn’t deal with  battle mechanics.. |
-| **Inheritance**   | Reusing and extending functionality of existing classes. | The design allows extensibility. The Attack class may serve as a base for specialized attacks, and Pokemon could be extended into subclasses (Fire-type, Water-type) without rewriting core code. |
-| **Polymorphism**  | Allowing the same method call to behave differently depending on the object. |The simulator can call the same method name on different objects and achieve different results. Different Pokémon may override getAttacks() or takeDamageFrom(). In future subclasses, overridden methods would run dynamically at runtime. |
+| **Inheritance**   | Reusing and extending functionality of existing classes. | `EnemyPokemon extends Pokemon`. This models the “is-a” relationship: an enemy Pokémon is a specific kind of `Pokemon` with extra behavior (`chooseRandomAttack()`). |
+| **Polymorphism**  | Allowing the same method call to behave differently depending on the object. |The simulator can call the same method name on different objects and achieve different results. Different Pokémon may override `getAttacks()` or `takeDamageFrom()`. In future subclasses, overridden methods would run dynamically at runtime. `EnemyPokemon` can be used anywhere a `Pokemon` is expected (battle methods accept `Pokemon`). |
 
 # ⭐ Features
   1. Trainer registration
