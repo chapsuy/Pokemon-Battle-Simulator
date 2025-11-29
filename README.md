@@ -71,7 +71,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 | **Inheritance**   | Reusing and extending functionality of existing classes. | The design allows extensibility. The Attack class may serve as a base for specialized attacks, and Pokemon could be extended into subclasses (Fire-type, Water-type) without rewriting core code. |
 | **Polymorphism**  | Allowing the same method call to behave differently depending on the object. |The simulator can call the same method name on different objects and achieve different results. Different Pokémon may override getAttacks() or takeDamageFrom(). In future subclasses, overridden methods would run dynamically at runtime. |
 
-# Features
+# ⭐ Features
   1. Trainer registration
       - Player enters their trainer name.
       - Friendly intro dialogue welcomes the trainer.
