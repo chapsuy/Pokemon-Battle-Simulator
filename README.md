@@ -37,7 +37,7 @@
 
 ```
 
-# Pokemon-Battle-Simulator
+# <img width="512" height="512" alt="pokeball" src="https://github.com/user-attachments/assets/f808b3b5-c60d-4657-90d6-778359bd1101" /> Pokemon-Battle-Simulator
 
 ## Overview
 The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates the core flow of classic Pokémon battles through an interactive gameplay. Designed across three escalating levels, the simulator challenges players to strategically manage their chosen starter Pokémon as they face increasingly tougher opponents throughout each level.
