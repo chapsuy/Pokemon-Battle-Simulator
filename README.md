@@ -307,5 +307,64 @@ D \cdot \max\left(0.1,\; 1 - \frac{\text{DEF}}{100} \right) \cdot r
 \right\rfloor \right), \quad r \in [0.85,\, 1.00]
 $$
 
+This function calculates damage by reducing the attacker’s base damage based on the defender’s defense stat, ensuring that at least 10% of the original damage always goes through. A random factor between 0.85 and 1.00 is then applied so the final damage varies slightly each time. Finally, the result is rounded down and guaranteed to be at least 1, ensuring every attack deals some damage.
+
+```
+public void takeDamagefrom(Attack attack) {
+        if (attack == null) {
+            System.out.println(getName() + " received no attack (null) — no damage applied.");
+            return;
+        }
+        int damage = attack.getDamage(this);  
+        if (type.equals("Fire") && attack.getType().equals("Grass")) {
+            System.out.println("It's super effective!");
+            damage *= 2; // Super effective
+        } else if (type.equals("Water") && attack.getType().equals("Fire")) {
+            System.out.println("It's super effective!");
+            damage *= 2; // Super effective
+        } else if (type.equals("Grass") && attack.getType().equals("Water")) {
+            System.out.println("It's super effective!");
+            damage *= 2; // Super effective
+        } else if (!type.equals("Normal") || !attack.getType().equals("Normal")) {
+            System.out.println("It's not very effective...");
+            damage /= 2; // NOT effective
+        }
+        HP -= damage;
+        if (HP < 0) HP = 0;
+    }
+```
+The `takeDamagefrom(attack)` adds a multiplier to the calculated damage depending on the types of both the Enemy and Player Pokemon. The function follows the existing type matrix of Pokemon games. 
+
+## Pokemon Run
+```
+public int runPokemon() {
+        HP = HP - (int)(Math.random() * 21 + 25); // Random damage between 25 and 45
+        if (HP < 0) HP = 0;  
+        return HP;  
+    }
+```
+Just like existing games, players are allowed to escape encounters within routes. However to prevent overuse of the game mechanic, every instance of a run would result to damage to the player's pokemon. RNG is used with a limitation that the damage would be a range from 25 to 45.
+
+## Pokemon Potion
+```
+public void potionPokemon() {
+        if(!potionUsed) {  // Simplified condition
+            int healAmount = 15;
+            if (HP + healAmount > maxHP) {
+                int actualHeal = maxHP - HP;
+                HP = maxHP;
+                System.out.println(name + " recovered " + actualHeal + " HP! HP is now max!");
+            } else {
+                HP += healAmount;
+                System.out.println(name + " recovered " + healAmount + " HP!");
+            }
+        } else {
+            System.out.println("Potion has already been used!");
+        }
+        potionUsed = true;
+    }
+```
+This function heals the Pokémon by 15 HP, but only if a potion hasn’t been used before. If the heal would exceed the maximum HP, the Pokémon is healed only up to its max instead, and the exact recovered amount is reported. After healing (or if already used), the function marks the potion as used so it cannot be used again.
+
 # Acknowledgements
   Team Avengers would like to express our deepest appreciation to our professor, **Ms. Fatima Marie Agdon**, who has an outstanding guidance and support throughout the duration of our semester in Java Object-Oriented Programming. Her dedication to teaching this course and her willingness to assist us whenever we faced problems in our code  truly made a a big impact  in our learning journey. The knowledge, motivation, and  insights she shared greatly enriched our understanding and helped us grow as programmers. We are sincerely thankful for her mentorship and for creating an environment that encouraged us to improve and succeed as her students.
