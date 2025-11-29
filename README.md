@@ -62,7 +62,7 @@ The Pokémon Battle Simulator **(PBS)** is a console-based game that recreates t
 - **De Castro, Aaron Rovic D.**
 - **Hepuller, Kate Nicole M.**
 
-
+---
 
 | OOP Principle    | Description | Application in PBS |
 |------------------|-------------|---------------------|
