@@ -51,6 +51,12 @@ public class Pokemon {
         } else if (type.equals("Grass") && attack.getType().equals("Water")) {
             System.out.println("It's super effective!");
             damage *= 2; // Super effective
+        } else if (type.equals("Bug" ) && attack.getType().equals("Fire")) {
+            System.out.println("It's not very effective...");
+            damage /= 2; // NOT effective
+        } else if (type.equals("Fire") && attack.getType().equals("Bug")) {
+            System.out.println("It's super effective!");
+            damage *= 2; // Super effective
         } else if (!type.equals("Normal") || !attack.getType().equals("Normal")) {
             System.out.println("It's not very effective...");
             damage /= 2; // NOT effective
@@ -108,5 +114,6 @@ public class Pokemon {
     }
    
     }
+
 
 
