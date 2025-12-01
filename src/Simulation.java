@@ -24,7 +24,7 @@ public class Simulation {
                     }
     }
 
-public Pokemon chooseStarterPokemon() {
+    public Pokemon chooseStarterPokemon() {
         System.out.println("================================");
         System.out.println("Choose your starter Pokemon:");
         System.out.println("1. Bulbasaur (Grass Type)");
@@ -197,16 +197,21 @@ public Pokemon chooseStarterPokemon() {
         System.out.println("3. Run");
         System.out.println("\n====================================\n");
         System.out.print("Choose an action (1-3): ");
-        int action = scanner.nextInt();
         try {
+            int action = scanner.nextInt();
             if (action < 1 || action > 3) {
                 throw new IllegalArgumentException("Action must be between 1 and 3.");
             }
+            return action;
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage() + ": Uhh ohh! Let's try again.");
             return Menu();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a number between 1 and 3.");
+            scanner.next(); 
+            return Menu();
         }
-        return action;
+        
     }
 
     public int Level1Battle(Pokemon thisPokemon, EnemyArray thisEnemyArray, Player thisplayer) {
@@ -502,4 +507,3 @@ public Pokemon chooseStarterPokemon() {
         player.addCoins(amount);
     }
 }
-
