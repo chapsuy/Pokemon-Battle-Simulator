@@ -24,29 +24,20 @@ public class Simulation {
                     }
     }
 
-    public Pokemon chooseStarterPokemon() {
+public Pokemon chooseStarterPokemon() {
         System.out.println("================================");
         System.out.println("Choose your starter Pokemon:");
         System.out.println("1. Bulbasaur (Grass Type)");
         System.out.println("2. Charmander (Fire Type)");
         System.out.println("3. Squirtle (Water Type)");
         System.out.println("================================");
-        int choice = scanner.nextInt();
-        System.out.print("You chose option: " + choice);
-        System.out.println("\n================================");
+        System.out.print("Enter the number of your choice (1-3): ");
         try {
+            int choice = scanner.nextInt();
             if (choice < 1 || choice > 3) {
                 throw new IllegalArgumentException("Choice must be between 1 and 3.");
             }
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage() + ": Uhh ohh! Let's try again.");
-            return chooseStarterPokemon();
-        } catch (InputMismatchException e) {
-            System.out.println("Invalid input. Please enter a number between 1 and 3.");
-            scanner.next(); 
-            return chooseStarterPokemon();
-        }
-        switch (choice) {
+            switch (choice) {
             case 1:
                 System.out.println("You chose Bulbasaur!");
                 Display.BulbasaurInfo(); 
@@ -82,6 +73,16 @@ public class Simulation {
 
                 
         }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage() + ": Uhh ohh! Let's try again.");
+            return chooseStarterPokemon();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a number between 1 and 3.");
+            scanner.next(); 
+            return chooseStarterPokemon();
+        }
+        
+        
         
     }
     public static void GameBriefing(){
@@ -501,3 +502,4 @@ public class Simulation {
         player.addCoins(amount);
     }
 }
+
