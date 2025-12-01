@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Simulation {
     Scanner scanner = new Scanner(System.in);
@@ -40,15 +41,19 @@ public class Simulation {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage() + ": Uhh ohh! Let's try again.");
             return chooseStarterPokemon();
-    }
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a number between 1 and 3.");
+            scanner.next(); 
+            return chooseStarterPokemon();
+        }
         switch (choice) {
             case 1:
                 System.out.println("You chose Bulbasaur!");
                 Display.BulbasaurInfo(); 
                 Pokemon bulbasaur = new Pokemon("Bulbasaur", 45, new Attack[]{
-                    new Attack("Growl", 8, "Normal"),
-                    new Attack("Tackle", 8, "Normal"),
-                    new Attack("Vine Whip", 14, "Grass")
+                    new Attack("Growl", 11, "Normal"),
+                    new Attack("Tackle", 10, "Normal"),
+                    new Attack("Vine Whip", 21, "Grass")
                     } , "Grass", 20);
                 
                     return bulbasaur;
@@ -57,18 +62,18 @@ public class Simulation {
                 System.out.println("You chose Charmander!");
                 Display.CharmanderInfo();
                 Pokemon charmander = new Pokemon("Charmander", 45, new Attack[]{
-                    new Attack("Growl", 8, "Normal"),
-                    new Attack("Scratch", 10, "Normal"),
-                    new Attack("Ember", 14, "Fire")
+                    new Attack("Growl", 10, "Normal"),
+                    new Attack("Scratch", 14, "Normal"),
+                    new Attack("Ember", 21, "Fire")
                     } , "Fire", 20);
                 return charmander;
             case 3:
                 System.out.println("You chose Squirtle!");
                 Display.SquirtleInfo();
                 Pokemon squirtle = new Pokemon("Squirtle", 45, new Attack[]{
-                    new Attack("Tail Whip", 8, "Normal"),
-                    new Attack("Tackle", 8, "Normal"),
-                    new Attack("Water Gun", 14, "Water")
+                    new Attack("Tail Whip", 11, "Normal"),
+                    new Attack("Tackle", 10, "Normal"),
+                    new Attack("Water Gun", 21, "Water")
                     } , "Water", 20);
                 return squirtle;
             default:
