@@ -286,26 +286,25 @@ Loading
 # Gameplay Mechanics
 ## Attack Damage
 ```
-public int getDamage(Pokemon victim) {
+    public int getDamage(Pokemon victim) {
         if (victim == null) {
             throw new IllegalArgumentException("Target pokemon cannot be null");
         }
 
         double baseDamage = damage * 1.0;
         int defenseValue = victim.getDefense();
-    
-        double defenseMultiplier = Math.max(0.1, 1.0 - (defenseValue / 100.0)); // Ensure at least 10% damage gets through
-        double randomMultiplier = Math.random() * 0.15 + 0.85;
-        
-        int calcDamage = (int)(baseDamage * defenseMultiplier * randomMultiplier);
-        return Math.max(1, calcDamage); 
+        if (defenseValue <= 0) {
+            defenseValue = 1; 
+        }
+        double randomMultiplier =0.85 + (Math.random() * 0.15 );
+        int calcDamage = (int)((2 + (baseDamage / (25.0 * defenseValue))) * randomMultiplier);
+        return Math.max(1, calcDamage);
+      
     }
 ```
-$$
-D_{\text{final}} = \max\left(1,\; \left\lfloor 
-D \cdot \max\left(0.1,\; 1 - \frac{\text{DEF}}{100} \right) \cdot r 
-\right\rfloor \right), \quad r \in [0.85,\, 1.00]
-$$
+\[
+\text{Damage} = \left( 2 + \frac{\text{Power}}{25D} \right) \times \text{Type}_1 \times \text{random}
+\]
 
 This function calculates damage by reducing the attacker’s base damage based on the defender’s defense stat, ensuring that at least 10% of the original damage always goes through. A random factor between 0.85 and 1.00 is then applied so the final damage varies slightly each time. Finally, the result is rounded down and guaranteed to be at least 1, ensuring every attack deals some damage.
 
@@ -323,6 +322,12 @@ public void takeDamagefrom(Attack attack) {
             System.out.println("It's super effective!");
             damage *= 2; // Super effective
         } else if (type.equals("Grass") && attack.getType().equals("Water")) {
+            System.out.println("It's super effective!");
+            damage *= 2; // Super effective
+        } else if (type.equals("Bug" ) && attack.getType().equals("Fire")) {
+            System.out.println("It's not very effective...");
+            damage /= 2; // NOT effective
+        } else if (type.equals("Fire") && attack.getType().equals("Bug")) {
             System.out.println("It's super effective!");
             damage *= 2; // Super effective
         } else if (!type.equals("Normal") || !attack.getType().equals("Normal")) {
