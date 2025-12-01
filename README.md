@@ -306,7 +306,7 @@ $$
 Damage = \left( 2 + \frac{Power}{25D} \right) \times Type_1 \times random
 $$
 
-This function calculates damage by reducing the attacker’s base damage based on the defender’s defense stat, ensuring that at least 10% of the original damage always goes through. A random factor between 0.85 and 1.00 is then applied so the final damage varies slightly each time. Finally, the result is rounded down and guaranteed to be at least 1, ensuring every attack deals some damage.
+The formula starts by dividing the move’s power by the defender’s defense to determine how strong the attack is compared to the target’s defense. Then, the value is increased by 2 so even weak moves still deal at least some damage. After that, the result is multiplied by the type effectiveness value, which adjusts damage based on whether the move is super effective, neutral, or not very effective. Finally, a random multiplier is applied so damage varies slightly each time instead of being the exact same number.
 
 ```
 public void takeDamagefrom(Attack attack) {
