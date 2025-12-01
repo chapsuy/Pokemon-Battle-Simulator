@@ -376,4 +376,4 @@ This function heals the Pokémon by 15 HP, but only if a potion hasn’t been us
 
 
 ## References
-[PokedemonDataBase](https://pokemondb.net/)
+https://pokemondb.net/
